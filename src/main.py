@@ -53,7 +53,6 @@ async def on_message(message):
 
     await bot.process_commands(message)
 
-
 @bot.command(name='admin')
 async def admin(ctx):
     member = discord.member
@@ -62,8 +61,11 @@ async def admin(ctx):
 
 @bot.command(name='count')
 async def count(ctx):
-    #await ctx.send(ctx.guild.member_count)
     guild = ctx.guild
     await ctx.send(f"Member count: {guild.member_count}")
+
+@bot.command(name='status')
+async def status(ctx):
+    await ctx.send(str(guild.member.status))
 
 bot.run(TOKEN)  # Starts the bot
