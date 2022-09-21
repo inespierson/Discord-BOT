@@ -66,6 +66,4 @@ async def count(ctx):
     guild = ctx.guild
     await ctx.send(f"Member count: {guild.member_count}")
 
-
-token = "MTAyMjE5NTE4NjY1NjM1NDM5Ng.G5hl2A.G2olHGfQVpL3gZKRj8_lAa4zZlZm14VUTBTgDE"
 bot.run(TOKEN)  # Starts the bot
