@@ -2,6 +2,12 @@ from discord.ext import commands
 from discord import Permissions
 import discord
 import random
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+TOKEN = os.getenv('DISCORD_TOKEN')
+GUILD = os.getenv('DISCORD_GUILD')
 
 intents = discord.Intents.default()
 intents.members = True
@@ -62,4 +68,4 @@ async def count(ctx):
 
 
 token = "MTAyMjE5NTE4NjY1NjM1NDM5Ng.G5hl2A.G2olHGfQVpL3gZKRj8_lAa4zZlZm14VUTBTgDE"
-bot.run(token)  # Starts the bot
+bot.run(TOKEN)  # Starts the bot
